@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Google Dorking Pentest</title>
+  <!-- Clickjacking & CSP Protection -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>
+          <h1>FMIS Pentest</h1>
+          <div style="font-size:12px;color:var(--muted)"> </div>
+        </div>
+      </div>
+      <nav aria-label="Top main names">
+        <div class="top-name" data-name="Home">Home</div>
+        <div class="top-name" data-name="Features">Features</div>
+        <div class="top-name" data-name="Pricing">Pricing</div>
+        <div class="top-name" data-name="About">About</div>
+        <div class="top-name" data-name="Contact">Contact</div>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="label">Enter Target</div>
+        <div class="input-row">
+          <input id="textInput" type="text" placeholder="Write or paste text here...">
+          <button id="applyBtn" class="btn-primary">Apply</button>
+        </div>
+
+        <div class="label" style="margin-top:14px">Google Dorking</div>
+        <div class="label" style="margin-top:14px">Sub Domain Finding</div>
+        <div id="buttons1" class="buttons"></div>
+
+        <div class="label" style="margin-top:14px">Information Disclosure</div>
+        <div id="buttons2" class="buttons"></div>
+
+        <div class="label" style="margin-top:14px">Technology Detector</div>
+        <div id="buttons3" class="buttons"></div>
+
+        <div class="label" style="margin-top:14px">Port Scanning</div>
+        <div id="buttons4" class="buttons"></div>
+
+        <div class="label" style="margin-top:14px">Origin IP Finding</div>
+        <div id="buttons5" class="buttons"></div>
+        
+        <div class="label" style="margin-top:14px">URL IP Finding</div>
+        <div id="buttons6" class="buttons"></div>
+
+        <div class="label" style="margin-top:14px">ALL Vulnerabilities</div>
+        <div id="buttons7" class="buttons"></div>
+
+        <div class="label" style="margin-top:14px">Tools Scripts</div>
+        <div style="display:flex;gap:10px;margin-top:8px"></div>
+        <div id="commandsContainer"></div>
+      </section>
+
+      <aside class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <div class="label">Display (click text to copy segment)</div>
+          <div class="label" style="font-size:12px">Total chars: <span id="charCount">0</span></div>
+        </div>
+
+        <div id="display" class="display" tabindex="0" aria-live="polite"></div>
+        <div class="meta" style="position:relative;margin-top:8px;display:flex;justify-content:flex-end;gap:8px">
+          <button id="copyBtn" class="copy-btn" title="Copy visible text">Copy</button>
+        </div>
+
+        <footer>
+          <div>Click any text inside the display to copy that piece.</div>
+          <div>Made with ♥</div>
+        </footer>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
